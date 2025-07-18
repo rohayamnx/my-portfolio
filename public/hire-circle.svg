@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+    <path id="textPath" d="M80,20 a60,60 0 0,1 0,120 a60,60 0 0,1 0,-120" fill="none"/>
+  </defs>
+
+  <g class="rotating-text">
+    <!-- Circular text path -->
+    <text>
+      <textPath href="#textPath" startOffset="0%" font-family="Arial" fill="url(#textGradient)">
+        <tspan font-size="16" font-weight="bold">Web Developer</tspan>
+        <tspan font-size="14"> • </tspan>
+        <tspan font-size="16" font-weight="bold">UI/UX Designer</tspan>
+        <tspan font-size="14"> • </tspan>
+        <tspan font-size="16" font-weight="bold">Full Stack Developer</tspan>
+        <tspan font-size="14"> • </tspan>
+      </textPath>
+    </text>
+  </g>
+
+  <!-- Center circle with gradient -->
+  <circle cx="80" cy="80" r="48" fill="url(#circleGradient)" filter="url(#glow)" />
+  <circle cx="80" cy="80" r="45" fill="#1A1A1A" />
+  
+  <!-- Hire Me text -->
+  <text x="80" y="80" text-anchor="middle" dominant-baseline="middle" fill="white" font-family="Arial" font-size="20" font-weight="bold">
+    Hire Me
+  </text>
+
+  <style>
+    .rotating-text {
+      animation: rotate 12s linear infinite;
+      transform-origin: 80px 80px;
+    }
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</svg> 
