@@ -3,18 +3,9 @@
 import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import { AnimatedHeading, AnimatedDiv } from '@/components/AnimatedText';
-import { useEffect, useState } from 'react';
-import type { ExperienceData } from '@/types/experience';
+import { experienceData } from '@/types/experience';
 
 export default function About() {
-  const [experienceData, setExperienceData] = useState<ExperienceData | null>(null);
-
-  useEffect(() => {
-    fetch('/experience.json')
-      .then(res => res.json())
-      .then(data => setExperienceData(data));
-  }, []);
-
   return (
     <>
       <Navigation />
@@ -27,7 +18,7 @@ export default function About() {
               <div className="rounded-full overflow-hidden w-full h-full bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500">
                 <Image
                   src="/developer-pic-1.png"
-                  alt="Web Designer"
+                  alt="Software Engineer"
                   fill
                   className="object-cover"
                   priority
@@ -36,9 +27,9 @@ export default function About() {
 
               {/* Experience Card */}
               <div className="absolute bottom-20 -right-5 bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg">
-                <h3 className="text-base font-semibold mb-0.5">Web Designer</h3>
+                <h3 className="text-base font-semibold mb-0.5">Software Engineer</h3>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 text-transparent bg-clip-text">180+</span>
+                  <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 text-transparent bg-clip-text">10+</span>
                   <span className="text-sm text-gray-600 dark:text-gray-300">Years</span>
                 </div>
                 <p className="text-xs text-gray-600 dark:text-gray-300 mt-0.5">Experience</p>
@@ -48,20 +39,26 @@ export default function About() {
             {/* Content Section */}
             <div className="flex-1">
               <AnimatedHeading 
-                text="I'm a Passionate Web Designer"
+                text="I'm a Passionate Software Engineer"
                 className="text-4xl lg:text-5xl font-bold mb-8 dark:text-white"
               />
               
               <AnimatedDiv className="prose dark:prose-invert max-w-none" delay={0.2}>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                  Obviously I'm a Web Designer, Web Developer with over 7 years of experience. I'm experienced with all stages 
-                  of the development cycle for dynamic web projects. I focus on creating clean, elegant, and efficient solutions 
-                  while maintaining a keen eye for design aesthetics.
+                  Senior Software Engineer with over a decade of experience in building enterprise-level applications. 
+                  I specialize in full-stack development, cloud infrastructure, and team leadership, bringing extensive 
+                  expertise in the complete software development lifecycle.
                 </p>
                 
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                  I'm a professional web designer and developer. My motive is to build the best web experiences with my years 
-                  of experience, combining technical expertise with creative design thinking to deliver outstanding results.
+                  My technical journey spans from leading Agile development teams to implementing cloud-based solutions 
+                  using modern technologies. I excel in translating complex business requirements into efficient, 
+                  scalable solutions while maintaining strong communication with stakeholders.
+                </p>
+
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                  Core strengths include cloud infrastructure automation, server management, and implementing CI/CD pipelines. 
+                  I'm passionate about creating robust, maintainable systems that drive business value through technology.
                 </p>
 
                 {/* See Work Button */}
@@ -87,7 +84,7 @@ export default function About() {
               
               {/* Experience Items */}
               <div className="space-y-24">
-                {experienceData?.experiences.map((exp, index) => (
+                {experienceData.experiences.map((exp, index) => (
                   <div key={index} className="relative flex items-center">
                     {/* Timeline Dot */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 bg-orange-500 rounded-full" />
