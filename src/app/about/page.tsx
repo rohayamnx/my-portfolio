@@ -17,10 +17,11 @@ export default function About() {
             <div className="relative w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] flex-shrink-0">
               <div className="rounded-full overflow-hidden w-full h-full bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500">
                 <Image
-                  src="/developer-pic-1.png"
+                  src="/developer-pic-4.png"
                   alt="Software Engineer"
-                  fill
-                  className="object-cover"
+                  width={1000}
+                  height={1000}
+                  className="object-cover w-full h-full"
                   priority
                 />
               </div>
@@ -93,7 +94,7 @@ export default function About() {
                     <div className={`flex w-full ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'} items-center`}>
                       <div className={`w-[45%] ${index % 2 === 0 ? 'pl-12' : 'pr-12'}`}>
                         <div className="flex items-center gap-4 mb-4">
-                          <div className="w-12 h-12 relative flex-shrink-0">
+                          <div className="w-24 h-24 relative flex-shrink-0">
                             <Image
                               src={exp.logo}
                               alt={exp.company}

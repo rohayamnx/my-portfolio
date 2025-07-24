@@ -13,22 +13,11 @@ export default function HomeContent() {
           {/* Developer Image */}
           <div className="relative w-full h-full">
             <Image
-              src="/developer-pic-1.png"
+              src="/developer-pic.png"
               alt="Developer Portrait"
               fill
               className="object-contain"
               priority
-            />
-          </div>
-
-          {/* Light Bulb - Positioned to the right */}
-          <div className="absolute -right-12 top-1/2 -translate-y-1/2 w-24 h-24">
-            <Image
-              src="/light-bulb.svg"
-              alt="Light Bulb"
-              width={96}
-              height={96}
-              className="w-full h-full"
             />
           </div>
         </div>
@@ -36,14 +25,19 @@ export default function HomeContent() {
         {/* Content Section */}
         <div className="text-center md:text-left">
           <AnimatedHeading 
-            text="Turning Vision Into Reality With Code And Design."
-            className="text-4xl md:text-6xl font-bold mb-6 dark:text-white"
+            text="Crafting Clean Code, Smart Systems, and Seamless Delivery."
+            className="text-4xl md:text-4xl font-bold mb-6 dark:text-white"
           />
           
           <AnimatedParagraph 
-            text="As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js and web development."
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8"
+            text="I'm a Software Engineer with over 10+ years of experience — experienced across all stages of the development process."
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4"
             delay={0.2}
+          />
+          <AnimatedParagraph 
+            text="I build modern applications that combine clean design with solid architecture, supported by CI/CD, Docker, and Kubernetes for smooth, scalable delivery."
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8"
+            delay={0.3}
           />
           
           <AnimatedDiv className="flex gap-4 justify-center md:justify-start" delay={0.4}>
