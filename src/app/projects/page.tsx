@@ -3,27 +3,14 @@
 import Navigation from '@/components/Navigation';
 import { AnimatedHeading, AnimatedDiv } from '@/components/AnimatedText';
 import Image from 'next/image';
-import Link from 'next/link';
-
-const projects = [
-  {
-    title: 'Project One',
-    description: 'A full-stack application built with Next.js and MongoDB.',
-    image: '/project1.jpg',
-    link: 'https://project1.com',
-    tags: ['Next.js', 'MongoDB', 'Tailwind CSS']
-  },
-  {
-    title: 'Project Two',
-    description: 'An e-commerce platform with real-time updates.',
-    image: '/project2.jpg',
-    link: 'https://project2.com',
-    tags: ['React', 'Node.js', 'Socket.io']
-  },
-  // Add more projects as needed
-];
+import { useState } from 'react';
+import { projects } from '@/types/projects';
+import ProjectModal from '@/components/ProjectModal';
+import { motion } from 'framer-motion';
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
+
   return (
     <>
       <Navigation />
@@ -38,17 +25,27 @@ export default function Projects() {
             {projects.map((project, index) => (
               <AnimatedDiv
                 key={project.title}
-                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg group"
                 delay={index * 0.1}
               >
-                <div className="relative h-48 w-full">
+                <motion.div 
+                  className="relative h-48 w-full cursor-pointer"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                  onClick={() => setSelectedProject(index)}
+                >
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     className="object-cover"
                   />
-                </div>
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                    <span className="text-white text-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      Click More
+                    </span>
+                  </div>
+                </motion.div>
                 
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 dark:text-white">
@@ -69,19 +66,28 @@ export default function Projects() {
                     ))}
                   </div>
                   
-                  <Link
-                    href={project.link}
-                    target="_blank"
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => setSelectedProject(index)}
                     className="inline-block bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity"
                   >
-                    View Project
-                  </Link>
+                    View Details
+                  </motion.button>
                 </div>
               </AnimatedDiv>
             ))}
           </div>
         </div>
       </div>
+
+      {selectedProject !== null && (
+        <ProjectModal
+          project={projects[selectedProject]}
+          isOpen={true}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </>
   );
 } 
