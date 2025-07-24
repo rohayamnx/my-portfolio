@@ -20,12 +20,12 @@
     <!-- Circular text path -->
     <text>
       <textPath href="#textPath" startOffset="0%" font-family="Arial" fill="url(#textGradient)">
-        <tspan font-size="16" font-weight="bold">Web Developer</tspan>
-        <tspan font-size="14"> • </tspan>
-        <tspan font-size="16" font-weight="bold">UI/UX Designer</tspan>
-        <tspan font-size="14"> • </tspan>
-        <tspan font-size="16" font-weight="bold">Full Stack Developer</tspan>
-        <tspan font-size="14"> • </tspan>
+        <tspan font-size="18" font-weight="bold">Full Stack Developer</tspan>
+        <tspan font-size="16"> • </tspan>
+        <!-- <tspan font-size="16" font-weight="bold">UI/UX Designer</tspan>
+        <tspan font-size="14"> • </tspan> -->
+        <tspan font-size="18" font-weight="bold">Software Engineer</tspan>
+        <tspan font-size="16"> • </tspan>
       </textPath>
     </text>
   </g>
