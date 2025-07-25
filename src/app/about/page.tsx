@@ -28,7 +28,7 @@ export default function About() {
 
               {/* Experience Card */}
               <div className="absolute bottom-20 -right-5 bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg">
-                <h3 className="text-base font-semibold mb-0.5">Software Engineer</h3>
+                <h3 className="text-base font-semibold mb-0.5 text-gray-600 dark:text-gray-300">Software Engineer</h3>
                 <div className="flex items-baseline gap-1">
                   <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 text-transparent bg-clip-text">10+</span>
                   <span className="text-sm text-gray-600 dark:text-gray-300">Years</span>
