@@ -95,21 +95,61 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
 
             {activeTab === 'architecture' && project.architecture && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {Object.entries(project.architecture).map(([category, technologies]) => (
-                  <div key={category} className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-                    <h3 className="text-base font-semibold mb-3 dark:text-white capitalize">
-                      {category}
-                    </h3>
-                    <ul className="space-y-1.5 text-sm">
-                      {technologies.map(tech => (
-                        <li key={tech} className="flex items-center text-gray-600 dark:text-gray-300">
-                          <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></span>
-                          {tech}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+                <div className="bg-gradient-to-br from-slate-50/90 to-blue-50/90 dark:from-slate-800/40 dark:to-blue-900/40 p-4 rounded-lg border border-slate-200/60 dark:border-slate-700/40">
+                  <h3 className="text-base font-semibold mb-3 text-slate-700 dark:text-slate-200">
+                    Frontend
+                  </h3>
+                  <ul className="space-y-1.5 text-sm">
+                    {project.architecture.frontend.map(tech => (
+                      <li key={tech} className="flex items-center text-slate-600 dark:text-slate-300">
+                        <span className="w-1.5 h-1.5 bg-blue-400 dark:bg-blue-500 rounded-full mr-2"></span>
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-br from-zinc-50/90 to-purple-50/90 dark:from-zinc-800/40 dark:to-purple-900/40 p-4 rounded-lg border border-zinc-200/60 dark:border-zinc-700/40">
+                  <h3 className="text-base font-semibold mb-3 text-zinc-700 dark:text-zinc-200">
+                    Backend
+                  </h3>
+                  <ul className="space-y-1.5 text-sm">
+                    {project.architecture.backend.map(tech => (
+                      <li key={tech} className="flex items-center text-zinc-600 dark:text-zinc-300">
+                        <span className="w-1.5 h-1.5 bg-purple-400 dark:bg-purple-500 rounded-full mr-2"></span>
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-br from-stone-50/90 to-emerald-50/90 dark:from-stone-800/40 dark:to-emerald-900/40 p-4 rounded-lg border border-stone-200/60 dark:border-stone-700/40">
+                  <h3 className="text-base font-semibold mb-3 text-stone-700 dark:text-stone-200">
+                    Database
+                  </h3>
+                  <ul className="space-y-1.5 text-sm">
+                    {project.architecture.database.map(tech => (
+                      <li key={tech} className="flex items-center text-stone-600 dark:text-stone-300">
+                        <span className="w-1.5 h-1.5 bg-emerald-400 dark:bg-emerald-500 rounded-full mr-2"></span>
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-br from-neutral-50/90 to-amber-50/90 dark:from-neutral-800/40 dark:to-amber-900/40 p-4 rounded-lg border border-neutral-200/60 dark:border-neutral-700/40">
+                  <h3 className="text-base font-semibold mb-3 text-neutral-700 dark:text-neutral-200">
+                    Deployment
+                  </h3>
+                  <ul className="space-y-1.5 text-sm">
+                    {project.architecture.deployment.map(tech => (
+                      <li key={tech} className="flex items-center text-neutral-600 dark:text-neutral-300">
+                        <span className="w-1.5 h-1.5 bg-amber-400 dark:bg-amber-500 rounded-full mr-2"></span>
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             )}
 
