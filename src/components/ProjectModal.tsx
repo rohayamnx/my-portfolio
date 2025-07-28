@@ -162,6 +162,12 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                     </div>
                     <div className="text-gray-600 dark:text-gray-300 mt-1 text-sm font-medium">Active Users</div>
                   </div>
+                  <div className="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 p-4 rounded-lg text-center">
+                    <div className="text-2xl font-bold text-red-600 dark:text-red-400">
+                      {project.metrics.branches?.toLocaleString()}
+                    </div>
+                    <div className="text-gray-600 dark:text-gray-300 mt-1 text-sm font-medium">Active Branches</div>
+                  </div>
                   <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 p-4 rounded-lg text-center">
                     <div className="text-2xl font-bold text-green-600 dark:text-green-400">
                       {project.metrics.transactions?.toLocaleString()}
