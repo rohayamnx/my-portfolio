@@ -22,32 +22,32 @@ const skills: Skill[] = [
     description: 'Used recently in full-stack project with MongoDB and Firebase integration.',
     icon: '/icons/nodejs.svg',
     category: 'Backend',
-    level: 90,
-    status: 'recent'
+    level: 50,
+    status: 'learning'
   },
   {
     name: 'Python',
     description: 'Used for AI/ML projects, scripting, and solving 550+ LeetCode DSA problems.',
     icon: '/icons/python.svg',
     category: 'Backend',
-    level: 85,
-    status: 'active'
+    level: 50,
+    status: 'learning'
   },
   {
     name: 'Express.js',
     description: 'Used with Node.js to create RESTful APIs and middleware for projects.',
     icon: '/icons/express.svg',
     category: 'Backend',
-    level: 88,
-    status: 'recent'
+    level: 50,
+    status: 'learning'
   },
   {
-    name: 'Rust',
-    description: 'Learning for systems programming and high-performance applications.',
-    icon: '/icons/rust.svg',
+    name: 'PHP',
+    description: 'My primary language for developing robust web applications and backend systems.',
+    icon: '/icons/php.webp',
     category: 'Backend',
-    level: 40,
-    status: 'learning'
+    level: 95,
+    status: 'active'
   },
   // Frontend Skills
   {
@@ -55,34 +55,34 @@ const skills: Skill[] = [
     description: 'Building modern and responsive user interfaces with React ecosystem.',
     icon: '/icons/react.svg',
     category: 'Frontend',
-    level: 90,
-    status: 'active'
+    level: 65,
+    status: 'recent'
   },
   {
     name: 'Next.js',
     description: 'Creating full-stack applications with server-side rendering.',
     icon: '/icons/nextjs.svg',
     category: 'Frontend',
-    level: 85,
+    level: 65,
     status: 'recent'
   },
-  {
-    name: 'Vue.js',
-    description: 'Learning for expanding frontend framework knowledge.',
-    icon: '/icons/vue.svg',
-    category: 'Frontend',
-    level: 45,
-    status: 'learning'
-  },
+  // {
+  //   name: 'Vue.js',
+  //   description: 'Learning for expanding frontend framework knowledge.',
+  //   icon: '/icons/vue.svg',
+  //   category: 'Frontend',
+  //   level: 45,
+  //   status: 'learning'
+  // },
   // Database Skills
-  {
-    name: 'MongoDB',
-    description: 'NoSQL database for scalable applications.',
-    icon: '/icons/mongodb.svg',
-    category: 'Database',
-    level: 85,
-    status: 'recent'
-  },
+  // {
+  //   name: 'MongoDB',
+  //   description: 'NoSQL database for scalable applications.',
+  //   icon: '/icons/mongodb.svg',
+  //   category: 'Database',
+  //   level: 85,
+  //   status: 'recent'
+  // },
   {
     name: 'PostgreSQL',
     description: 'Relational database for complex data relationships.',
@@ -92,20 +92,28 @@ const skills: Skill[] = [
     status: 'active'
   },
   {
-    name: 'Redis',
-    description: 'Exploring for caching strategies and session storage while learning URL shortening.',
-    icon: '/icons/redis.svg',
+    name: 'MySQL',
+    description: 'Relational database for complex data relationships.',
+    icon: '/icons/mysql.svg',
     category: 'Database',
-    level: 50,
-    status: 'learning'
+    level: 80,
+    status: 'active'
   },
+  // {
+  //   name: 'Redis',
+  //   description: 'Exploring for caching strategies and session storage while learning URL shortening.',
+  //   icon: '/icons/redis.svg',
+  //   category: 'Database',
+  //   level: 50,
+  //   status: 'learning'
+  // },
   // Tools
   {
     name: 'Docker',
     description: 'Containerization and deployment of applications.',
     icon: '/icons/docker.svg',
     category: 'Tools',
-    level: 75,
+    level: 90,
     status: 'active'
   },
   {
@@ -121,8 +129,8 @@ const skills: Skill[] = [
     description: 'Learning for container orchestration and scaling.',
     icon: '/icons/kubernetes.svg',
     category: 'Tools',
-    level: 35,
-    status: 'learning'
+    level: 55,
+    status: 'recent'
   }
 ];
 
